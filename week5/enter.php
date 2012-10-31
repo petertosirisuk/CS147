@@ -30,8 +30,24 @@
 	<div data-role="content">	
 		
 		<?php
+$link = mysql_connect('mysql-user-master.stanford.edu', 'ccs147tosiris', 'eiboonah');
+mysql_select_db('c_cs147_tosiris');
+?>
+		
+		<?php
+			include("config.php");
+			$query = "select * from sometable where username = ‘test’ and password=’test’";
+			$result = mysql_query($query);
+			// This tells you how many rows were returned
+			$num_rows = mysql_num_rows($result);
+
+			while ($row = mysql_fetch_assoc($result)) {
+				// You will get here is a table called sometable
+				// and a username test and password test exists. If it doesn’t exist
+				// you won’t land here.
+			} 
 		// This is a hack. You should connect to a database here.
-		if ($_POST["username"] == "oi") {
+		if ($_POST["username"] == "oi" or ($_POST["username"] == "test" and $_POST["password"] == "test")) {
 			?>
 			<script type="text/javascript">
 				// Save the username in local storage. That way you
@@ -53,8 +69,8 @@
 		<ul>
 			<li><a href="index.php" id="home" data-icon="custom">Home</a></li>
 			<li><a href="login.php" id="key" data-icon="custom" class="ui-btn-active">Login</a></li>
-			<li><a href="filter.php" id="beer" data-icon="custom">Filter</a></li>
-			<li><a href="#" id="skull" data-icon="custom">Settings</a></li>
+			<li><a href="filter.php" id="radar" data-icon="custom">Filter</a></li>
+			<li><a href="settings.php" id="gear" data-icon="custom">Settings</a></li>
 		</ul>
 		</div>
 	</div>

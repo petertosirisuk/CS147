@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>VoteCaster | Filter</title> 
+	<title>VoteCaster | Settings</title> 
 	<meta charset="utf-8">
 	<meta name="apple-mobile-web-app-capable" content="yes">
  	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -19,41 +19,15 @@
 </head> 
 <body> 
 
-<div data-role="page" id="filter">
+<div data-role="page" id="settings">
 
 	<div data-role="header">
 		<a href="index.html" data-icon="delete">Save</a>
-		<h1>Forms</h1>
+		<h1>Settings</h1>
 		<a href="index.html" data-icon="check">Cancel</a>
 
 	</div><!-- /header -->
-
-	<div data-role="content">	
-		<p></p>
-		<ul data-role="listview" data-inset="true" data-filter="true">
-			<li><a href="#">Barack Obama</a></li>
-			<li><a href="#">Mitt Romney</a></li>
-			<li><a href="#">Peta Lindsay</a></li>
-			<li><a href="#">Rocky Anderson</a></li>
-			<li><a href="#">Virgil Goode</a></li>
-			<li><a href="#">Jill Stein</a></li>
-			<li><a href="#">Gary Johnson</a></li>
-		</ul>
-		
-		<ul data-role="listview" data-inset="true">
-			<li class="taphold">Tap and hold me</li>
-			<li class="tap">Tap me</li>			
-			<li class="swiperight">Swipe me right</li>
-			<li class="swipeleft">Swipe me left</li>
-		</ul>
-		
-		<a href="#" data-role="button" data-icon="star">Star button</a>
-
-		<div data-role="collapsible">
-		   <h3>I'm a header</h3>
-		   <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
-		</div>
-	
+	<div data-role="content">
 	<form action="submit.php" method="post">
 		<div data-role="fieldcontain">
 	     <label for="foo">Text Input:</label>
@@ -104,14 +78,14 @@
 		<ul>
 			<li><a href="index.php" id="home" data-icon="custom">Home</a></li>
 			<li><a href="login.php" id="key" data-icon="custom">Login</a></li>
-			<li><a href="filter.php" id="radar" data-icon="custom" class="ui-btn-active">Filter</a></li>
-			<li><a href="settings.php" id="gear" data-icon="custom">Settings</a></li>
+			<li><a href="filter.php" id="radar" data-icon="custom">Filter</a></li>
+			<li><a href="settings.php" id="gear" data-icon="custom" class="ui-btn-active">Settings</a></li>
 		</ul>
 		</div>
 	</div>
 	
 	<script type="text/javascript">
-		$('#filter').live( 'pageinit',function(event){
+		$('#settings').live( 'pageinit',function(event){
 			$(".taphold").on('taphold', function(event){
 				alert("You tapped and held");
 			});

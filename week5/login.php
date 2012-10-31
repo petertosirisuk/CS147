@@ -28,16 +28,22 @@
 	</div><!-- /header -->
 
 	<div data-role="content">
-	
-	<p>The form should go here</p>
+		<form action="enter.php" method="post">
+			<label for="foo">Username:</label>
+			<input type="text" name="username" id="foo">
+			<label for="bar">Password:</label>
+			<input type="password" name="password" id="bar">
+			<input type="submit" value="Login">
+		</form>
+		
 		<div data-role="fieldcontain">
 			
 		</div>	
 	
 		
-	<div id="info">
-		<p>Thank you for logging. You should be able to see all sorts of user information here.</p>
-	</div>	
+		<div id="info">
+			<p>Thank you for logging. You should be able to see all sorts of user information here.</p>
+		</div>	
 	</div><!-- /content -->
 
     <div data-role="footer" data-id="samebar" class="nav-glyphish-example" data-position="fixed" data-tap-toggle="false">
@@ -45,8 +51,8 @@
 		<ul>
 			<li><a href="index.php" id="home" data-icon="custom">Home</a></li>
 			<li><a href="login.php" id="key" data-icon="custom" class="ui-btn-active">Login</a></li>
-			<li><a href="filter.php" id="beer" data-icon="custom">Filter</a></li>
-			<li><a href="#" id="skull" data-icon="custom">Settings</a></li>
+			<li><a href="filter.php" id="radar" data-icon="custom">Filter</a></li>
+			<li><a href="settings.php" id="gear" data-icon="custom">Settings</a></li>
 		</ul>
 		</div>
 	</div>
